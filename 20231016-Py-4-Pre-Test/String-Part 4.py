@@ -1,4 +1,3 @@
-s=input().strip()
-ss=s.split()
-ss="_".join(ss)
-print(ss)
+s=input().strip().split()
+s="_".join(s)
+print(s)
