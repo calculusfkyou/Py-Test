@@ -1,4 +1,4 @@
-# 測茲沒有空格
+# 測資沒有空格
 n = int(input())
 m = int(input())
 for i in range(1, n + 1):
