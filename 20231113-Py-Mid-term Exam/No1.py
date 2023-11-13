@@ -1,4 +1,3 @@
-# v1
 nums = list(map(int, input().split()))
 operands = list(map(str, input().split()))
 t, temp = [], 0
@@ -8,25 +7,24 @@ for i in range(len(nums)):
         temp = 0
     t.append(operands[temp])
     temp += 1
-# print(t)
 t.pop()
 temp, check = [], 1
 for i in range(len(t)):
     if not check:
-        check = 1
+        check=1
         continue
-    if t[i] == "*":
-        temp.append(temp[-1] * t[i + 1])
+    if t[i]=="*":
+        temp.append(temp[-1]*t[i+1])
         temp.pop(-2)
-        check = 0
-    elif t[i] == "/":
-        temp.append(temp[-1] // t[i + 1])
+        check=0
+    elif t[i]=="/":
+        temp.append(temp[-1]//t[i+1])
         temp.pop(-2)
-        check = 0
-    elif t[i] == "%":
-        temp.append(temp[-1] % t[i + 1])
+        check=0
+    elif t[i]=="%":
+        temp.append(temp[-1]%t[i+1])
         temp.pop(-2)
-        check = 0
+        check=0
     else:
         temp.append(t[i])
 ans = []
@@ -44,17 +42,4 @@ for i in range(len(temp)):
         check = 0
     else:
         ans.append(temp[i])
-print(int(ans[0]))
-
-# v2
-nums = list(map(int, input().split()))
-operands = list(map(str, input().split()))
-t, temp = [], 0
-for i in range(len(nums)):
-    t.append(str(nums[i]))
-    if temp == len(operands):
-        temp = 0
-    t.append(operands[temp])
-    temp += 1
-t.pop()
-print(eval("".join(t)))
+print(ans[0])
