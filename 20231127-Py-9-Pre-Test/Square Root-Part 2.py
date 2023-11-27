@@ -18,3 +18,21 @@ if n[0] ** 0.5 - int(n[0] ** 0.5) != 0:
 else:
     result = 0
 print(result)
+
+# 100% version
+# import math
+#
+# x = input()
+# y = [float(x) for x in x.split()]
+#
+# z = math.sqrt(y[0])
+#
+# a = "{:.15f}".format(z)
+#
+# sum_of_digits = 0
+# for position in y[1:]:
+#     if 0 < position <= len(a.split('.')[1]):
+#         digit = int(a.split('.')[1][int(position) - 1])
+#         sum_of_digits += digit
+#
+# print(sum_of_digits)
