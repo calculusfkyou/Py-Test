@@ -9,17 +9,17 @@
 # result = custom_sum(input_list)
 # print(result)
 
-n = list(map(int, input().split()))
-result = 0
-if n[0] ** 0.5 - int(n[0] ** 0.5) != 0:
-    while len(n) > 1:
-        result += int(str(n[0] ** 0.5)[n[1] + 1])
-        n = n[:1] + n[2:]
-else:
-    result = 0
-print(result)
+# n = list(map(int, input().split()))
+# result = 0
+# if n[0] ** 0.5 - int(n[0] ** 0.5) != 0:
+#     while len(n) > 1:
+#         result += int(str(n[0] ** 0.5)[n[1] + 1])
+#         n = n[:1] + n[2:]
+# else:
+#     result = 0
+# print(result)
 
-# 100% version
+# 100% version1
 # import math
 #
 # x = input()
@@ -36,3 +36,17 @@ print(result)
 #         sum_of_digits += digit
 #
 # print(sum_of_digits)
+
+# 100% version2
+# a = input().split()
+# b = str(int(a[0]) ** 0.5)
+# ans = 0
+# if b[0] == '-':
+#     b = b[3:]
+# else:
+#     b = b[2:]
+# for i in range(1, len(a)):
+#     if len(b) < int(a[i]):
+#         continue
+#     ans += int(b[int(a[i]) - 1])
+# print(ans)
