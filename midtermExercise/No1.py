@@ -1,5 +1,5 @@
 # v1
-nums = list(map(int, input().split()))
+"""nums = list(map(int, input().split()))
 operands = list(map(str, input().split()))
 t, temp = [], 0
 for i in range(len(nums)):
@@ -44,7 +44,7 @@ for i in range(len(temp)):
         check = 0
     else:
         ans.append(temp[i])
-print(int(ans[0]))
+print(int(ans[0]))"""
 
 # v2
 nums = list(map(int, input().split()))
@@ -54,7 +54,10 @@ for i in range(len(nums)):
     t.append(str(nums[i]))
     if temp == len(operands):
         temp = 0
-    t.append(operands[temp])
+    if operands[temp]=="/":
+        t.append("//")
+    else:
+        t.append(operands[temp])
     temp += 1
 t.pop()
 print(eval("".join(t)))
